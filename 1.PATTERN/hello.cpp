@@ -67,10 +67,35 @@ void print6(int n)
     }
 }
 
+void print7(int n)
+{   //this is the outer loop
+    for(int i=0;i<n;i++)
+    {
+        //this loop will print space
+        for(int j=0;j<n-i;j++)
+        {
+            cout<<" ";
+        }
+        //this loop will print star
+        for(int j=0;j<2*i+1;j++)
+        {
+            cout<<"*";
+        }
+         //this loop will print space
+        for(int j=0;j<n-i;j++)
+        {
+            cout<<" ";
+        }
+        cout<<endl;
+
+
+    }
+}
+
 int main()
 {
     int n;
     cin >> n;
-    print6(n);
+    print7(n);
     return 0;
 }
