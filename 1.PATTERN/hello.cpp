@@ -46,49 +46,106 @@ void print4(int n)
 }
 void print5(int n)
 {
-    for(int i=0;i<n;i++)
+    for (int i = 0; i < n; i++)
     {
-        for(int j=0;j<=n-i-1;j++)
+        for (int j = 0; j <= n - i - 1; j++)
         {
-            cout<<"*";
+            cout << "*";
         }
-        cout<<endl;
+        cout << endl;
     }
 }
 void print6(int n)
 {
-    for(int i=0;i<n;i++)
+    for (int i = 0; i < n; i++)
     {
-        for(int j=1;j<=n-i;j++)
+        for (int j = 1; j <= n - i; j++)
         {
-            cout<<j;
+            cout << j;
         }
-        cout<<endl;
+        cout << endl;
     }
 }
-
 void print7(int n)
-{   //this is the outer loop
-    for(int i=0;i<n;i++)
+{ // this is the outer loop
+    for (int i = 0; i < n; i++)
     {
-        //this loop will print space
-        for(int j=0;j<n-i;j++)
+        // this loop will print space
+        for (int j = 0; j < n - i; j++)
         {
-            cout<<" ";
+            cout << " ";
         }
-        //this loop will print star
-        for(int j=0;j<2*i+1;j++)
+        // this loop will print star
+        for (int j = 0; j < 2 * i + 1; j++)
         {
-            cout<<"*";
+            cout << "*";
         }
-         //this loop will print space
-        for(int j=0;j<n-i;j++)
+        // this loop will print space
+        for (int j = 0; j < n - i; j++)
         {
-            cout<<" ";
+            cout << " ";
         }
-        cout<<endl;
+        cout << endl;
+    }
+}
+void print8(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            cout << " ";
+        }
+        for (int j = 0; j < 2 * n - 2 * i - 1; j++)
+        {
+            cout << "*";
+        }
 
+        for (int j = 0; j < i; j++)
+        {
+            cout << " ";
+        }
+        cout << endl;
+    }
+}
+void upper(int n)
 
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            cout << " ";
+        }
+        for (int j = 0; j < 2 * i + 1; j++)
+        {
+            cout << "*";
+        }
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            cout << " ";
+        }
+        cout << endl;
+    }
+}
+void lower(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            cout << " ";
+        }
+        for (int j = 0; j < 2 * n - 2 * i - 1; j++)
+        {
+            cout << "*";
+        }
+
+        for (int j = 0; j < i; j++)
+        {
+            cout << " ";
+        }
+        cout << endl;
     }
 }
 
@@ -96,6 +153,8 @@ int main()
 {
     int n;
     cin >> n;
-    print7(n);
+    // print8(n);
+    upper(n);
+    lower(n);
     return 0;
 }
