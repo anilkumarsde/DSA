@@ -179,12 +179,46 @@ void print11(int n)
         cout << endl;
     }
 }
+void print12(int n)
+{
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=1;j<=i;j++)
+        {
+            cout<<j;
+        }
+        for(int j=1;j<=2*n-2*i;j++)
+        {
+            cout<<" ";
+        }
+        for(int j=i;j>=1;j--)
+        {
+            cout<<j;
+        }
+        cout<<endl;
+    }
+}
+void print13(int n)
+{
+    int c=1;
+    for(int i=i;i<=n;i++)
+    {
+        for(int j=1;j<=i;j++)
+        {
+            cout<<c<<" ";
+            c++;
+        }
+        cout<<endl;
+    }
+}
 
 int main()
 {
+
+    //taking input value
     int n;
     cin >> n;
-    print11(n);
+    print13(n);
     // upper(n);
     // lower(n);
     return 0;
