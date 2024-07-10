@@ -181,44 +181,57 @@ void print11(int n)
 }
 void print12(int n)
 {
-    for(int i=1;i<=n;i++)
+    for (int i = 1; i <= n; i++)
     {
-        for(int j=1;j<=i;j++)
+        for (int j = 1; j <= i; j++)
         {
-            cout<<j;
+            cout << j;
         }
-        for(int j=1;j<=2*n-2*i;j++)
+        for (int j = 1; j <= 2 * n - 2 * i; j++)
         {
-            cout<<" ";
+            cout << " ";
         }
-        for(int j=i;j>=1;j--)
+        for (int j = i; j >= 1; j--)
         {
-            cout<<j;
+            cout << j;
         }
-        cout<<endl;
+        cout << endl;
     }
 }
 void print13(int n)
 {
-    int c=1;
-    for(int i=i;i<=n;i++)
+    int c = 1;
+    for (int i = 0; i < n; i++)
     {
-        for(int j=1;j<=i;j++)
+        for (int j = 0; j <= i; j++)
         {
-            cout<<c<<" ";
+            cout << c << " ";
             c++;
         }
-        cout<<endl;
+        cout << endl;
+    }
+}
+void print14(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        char c = 'A';
+        for (int j = 0; j <= i; j++)
+        {
+            cout << c << " ";
+            c++;
+        }
+        cout << endl;
     }
 }
 
 int main()
 {
 
-    //taking input value
+    // taking input value
     int n;
     cin >> n;
-    print13(n);
+    print14(n);
     // upper(n);
     // lower(n);
     return 0;
