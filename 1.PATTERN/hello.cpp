@@ -224,6 +224,31 @@ void print14(int n)
         cout << endl;
     }
 }
+void print15(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        char c = 'A';
+        for (int j = 0; j < n - i; j++)
+        {
+            cout << c << " ";
+            c++;
+        }
+        cout << endl;
+    }
+}
+void print16(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        char c = 'A' + i;
+        for (int j = 0; j <= i; j++)
+        {
+            cout << c << " ";
+        }
+        cout << endl;
+    }
+}
 
 int main()
 {
@@ -231,7 +256,7 @@ int main()
     // taking input value
     int n;
     cin >> n;
-    print14(n);
+    print16(n);
     // upper(n);
     // lower(n);
     return 0;
