@@ -251,37 +251,89 @@ void print16(int n)
 }
 void print17(int n)
 {
-    for(int i =0; i<n; i++)
+    for (int i = 0; i < n; i++)
     {
-        for(int j=0;j<n-i-1;j++)
+        for (int j = 0; j < n - i - 1; j++)
         {
-            cout<<" ";
+            cout << " ";
         }
 
-        char ch='A';
-        int breakpoint=(2*i+1)/2;
-        for(int j=0;j<(2*i+1);j++)
+        char ch = 'A';
+        int breakpoint = (2 * i + 1) / 2;
+        for (int j = 0; j < (2 * i + 1); j++)
         {
-            cout<<ch;
-            if(j<breakpoint) ch++;
-            else ch--;
-
+            cout << ch;
+            if (j < breakpoint)
+                ch++;
+            else
+                ch--;
         }
-        for(int j=0;j<n-i-1;j++)
+        for (int j = 0; j < n - i - 1; j++)
         {
-            cout<<" ";
+            cout << " ";
         }
-        cout<<endl;
+        cout << endl;
     }
 }
-
+void print18(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (char c = ('A' + n - 1) - i; c <= 'A' + n - 1; c++)
+        {
+            cout << c << " ";
+        }
+        cout << endl;
+    }
+}
+void print19(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        // for star
+        for (int j = 0; j < n - i; j++)
+        {
+            cout << "*";
+        }
+        // space
+        for (int j = 0; j < 2 * i; j++)
+        {
+            cout << " ";
+        }
+        // star
+        for (int j = 0; j < n - i; j++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j <= i; j++)
+        {
+            //star
+            cout << "*";
+        }
+        for (int j = 0; j < 2 * n - 2 * i - 2; j++)
+        {
+            //space
+            cout << " ";
+        }
+        for (int j = 0; j <= i; j++)
+        {
+            //star
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
 int main()
 {
 
     // taking input value
     int n;
     cin >> n;
-    print17(n);
+    print19(n);
     // upper(n);
     // lower(n);
     return 0;
