@@ -381,6 +381,6 @@ int main()
 {
     int n;
     cin >> n;
-    print9(n);
+    print19(n);
     return 0;
 }
